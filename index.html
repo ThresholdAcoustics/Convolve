@@ -1,11 +1,435 @@
 <!DOCTYPE html>
+
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    hi hi hi
-</body>
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Auralization</title>
+    <link rel="shortcut icon" type="image/x-icon" href="https://images.squarespace-cdn.com/content/v1/57cf279a2994caabf4c2dc8d/1473194611671-Y74VZUWLHEEJQ6QVI6ZU/ke17ZwdGBToddI8pDm48kOyctPanBqSdf7WQMpY1FsRZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpwwQIrqN0bcqL_6-iJCOAA0qwytzcs0JTq1XS2aqVbyK6GtMIM7F0DGeOwCXa63_4k/favicon.ico?format=100w"/>
+    <meta name="Info" content="Impulse" />
+    <meta name="author" content="Nicolaus Dulworth" />
+    <link rel="stylesheet" href="styles.css" />
+  <!--   <link
+      href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap"
+      rel="stylesheet"
+    /> -->
+    <link href="vendor/fontawesome/css/all.css" rel="stylesheet" />
+    <!-- <link href="//db.onlinewebfonts.com/c/85aa81413708ebb77a4ed7712511b8aa?family=Univers" rel="stylesheet" type="text/css"/>
+     -->
+  </head>
+
+  <body>
+
+	<div id="intro" class="modal">
+		<div class="Card__introContent">
+			<!-- <h2>Auralization</h2>
+			<ul>
+				<li>Supported browsers: Chrome</li>
+				<li>Use wired headphones for the best experience</li>
+				<li>Avoid bluetooth devices as they may force monophonic playback</li>
+			</ul> -->
+			<strong>Welcome to Threshold's Online Auralization Studio </strong> where you can hear your voice as a performer inside some of the world's best rooms. 
+			<br>
+			We recommend grabbing your wired headphones and using <a href="https://www.google.com/chrome/" target="_blank">Chrome</a> for the best experience. Tablets and phones are not supported.
+			<br>
+			Use the buttons and pop up menus to record your voice, listen to recordings, and travel between rooms. 
+				<br>
+			<button id="closeIntro" class="Button">
+				Auralize It!
+			</button>
+		</div>	
+	</div>
+
+	<button id="toggleFullscreen" class="Button">
+			<span style="font-family:Karla"> <i class="fas fa-expand"></i></span>&nbsp;Enter Fullscreen
+	</button>
+
+	<button id="toggleRoomInfo" class="Button">
+			<span style="font-family:Karla"></span>Show Room Info &nbsp;<i class="fas fa-chevron-down"></i>
+	</button>
+
+
+
+	
+    <div id="bgnDiv"><!-- contains background image -->
+
+
+<!-- Room 0 Info  ////////////////////////////////////////////////////////          -->
+
+		<div id="roomInfo">
+			<div id="roomInfo-0" style="display: inline">
+				<h2>Brockman Hall for Opera</h2>
+				<h2>Lucian and Nancy Morrison Theater</h2>
+				<h3>Configured for Opera</h3>
+				<p> 
+					An educational facility, the Opera Performance Hall at the Shepherd School of Music, 
+					has an acoustic character that stretches and supports the next generation of professional opera singers. 
+					The 600-seat theatre’s design originated from visits and research undertaken by the school and design team 
+					to benchmark facilities like the Royal Opera at the Palace of Versailles and Estates Theatre in Prague. 
+				</p>
+				<p>
+					Owner: <a href="https://music.rice.edu" target="_blank">Rice University</a>
+					<br>
+					Architect: <a href="https://allangreenberg.com" target="_blank">Allan Greenberg Architect</a>
+					<br>
+					Theatre Consultant: <a href="http://www.fda-online.com" target="_blank">Fisher Dachs Associates</a>
+					<br>
+					Acoustician: <a href="https://www.thresholdacoustics.com/" target="_blank">Threshold Acoustics</a>
+				</p>
+
+					For more information visit <a href="https://www.thresholdacoustics.com/rice-university" target="_blank">Threshold Acoustics</a>
+			
+			</div> <!-- id = room Info X -->
+
+			<div id="roomInfo-1" style="display: none">
+				<h2>Brockman Hall for Opera</h2>
+				<h2>Lucian and Nancy Morrison Theater</h2>
+				<h3>Orchestra Shell Deployed</h3>
+				<p> 
+					An educational facility, the Opera Performance Hall at the Shepherd School of Music, 
+					has an acoustic character that stretches and supports the next generation of professional opera singers. 
+					The 600-seat theatre’s design originated from visits and research undertaken by the school and design team 
+					to benchmark facilities like the Royal Opera at the Palace of Versailles and Estates Theatre in Prague. 
+				</p>
+				<p>
+					Owner: <a href="https://music.rice.edu" target="_blank">Rice University</a>
+					<br>
+					Architect: <a href="https://allangreenberg.com" target="_blank">Allan Greenberg Architect</a>
+					<br>
+					Theatre Consultant: <a href="http://www.fda-online.com" target="_blank">Fisher Dachs Associates</a>
+					<br>
+					Acoustician: <a href="https://www.thresholdacoustics.com/" target="_blank">Threshold Acoustics</a>
+				</p>
+
+					For more information visit <a href="https://www.thresholdacoustics.com/rice-university" target="_blank">Threshold Acoustics</a>
+			</div> <!-- id = room info X -->
+
+			<div id="roomInfo-2" style="display: none">
+				<h2>Writers' Theatre</h2>
+				<p> </p> 
+				
+				<p> 
+					The intimacy found in 250-seat Nichols Theater is created in part by the back screen made of brick salvaged 
+					from the original building, transforming as it rises to an open, variegated sculpture. The screen speaks softly back to the 
+					actors, creating acoustic intimacy for performers and audiences. 
+				</p>
+				<p>
+					Owner: <a href="https://www.writerstheatre.org" target="_blank">Writers' Theatre</a>
+					<br>
+					Architect: <a href="https://studiogang.com" target="_blank">Studio Gang Architects</a>
+					<br>
+					Theatre Consultant: <a href="https://www.auerbachconsultants.com" target="_blank">Auerbach Pollock Friedlander</a>
+					<br>
+					Acoustician: <a href="https://www.thresholdacoustics.com/" target="_blank">Threshold Acoustics</a>
+				</p>
+					For more information visit <a href="https://www.thresholdacoustics.com/writers-theatre" target="_blank">Threshold Acoustics</a>
+			</div> <!-- id = room Info X -->
+
+
+			<div id="roomInfo-3" style="display: none">
+				<h2>Brown Performing Arts Center</h2>
+				<h3>Recital</h3>
+				<p> A theatre, an experimental media room, and a recital hall. 
+					Brown University’s Performing Arts Center provides room for all three within a small footprint 
+					by moving the walls and ceiling to fit the performances’ needs. Varying the 
+					intimacy and absorption of the room itself keeps the audience close to the action, no matter the situation. 
+				</p>
+				<p>
+					Owner: <a href="https://arts.brown.edu" target="_blank">Brown Arts Initiative</a>
+					<br>
+					Architect: <a href="https://rex-ny.com" target="_blank">REX</a>
+					<br>
+					Theatre Consultant: <a href="http://theatreprojects.com/en/" target="_blank">Theatre Consultant</a>
+					<br>
+					Acoustician: <a href="https://www.thresholdacoustics.com/" target="_blank">Threshold Acoustics</a>
+				</p>
+
+					For more information visit <a href="https://www.thresholdacoustics.com/brown-pac" target="_blank">Threshold Acoustics</a>
+
+			</div> <!-- id = room Info X -->
+
+
+			<div id="roomInfo-4" style="display: none">
+				<h2>Brown Performing Arts Center</h2>
+				<h3>Orchestra</h3>
+				<p> A theatre, an experimental media room, and a recital hall. 
+					Brown University’s Performing Arts Center provides room for all three within a small footprint 
+					by moving the walls and ceiling to fit the performances’ needs. Varying the 
+					intimacy and absorption of the room itself keeps the audience close to the action, no matter the situation. 
+				</p>
+				<p>
+					Owner: <a href="https://arts.brown.edu" target="_blank">Brown Arts Initiative</a>
+					<br>
+					Architect: <a href="https://rex-ny.com" target="_blank">REX</a>
+					<br>
+					Theatre Consultant: <a href="http://theatreprojects.com/en/" target="_blank">Theatre Projects Consultants</a>
+					<br>
+					Acoustician: <a href="https://www.thresholdacoustics.com/" target="_blank">Threshold Acoustics</a>
+				</p>
+					For more information visit <a href="https://www.thresholdacoustics.com/brown-pac" target="_blank">Threshold Acoustics</a>
+
+			</div> <!-- id = room Info X -->
+
+
+			<div id="roomInfo-5" style="display: none">
+				<h2>Wheaton Concert Hall</h2>
+				<p> </p> 
+				<p>What was once a building with lecture halls for the Science department is now home to this new 650-seat concert hall, 
+					the college’s first dedicated rehearsal hall for their choral program. 
+				</p>
+				<p>
+					Owner: <a href="https://www.wheaton.edu" target="_blank">Wheaton College</a>
+					<br>
+					Architect: <a href="https://hga.com/" target="_blank">HGA Architects and Engineers</a>
+					<br>
+					Architect of Record: <a href="http://www.fgmarchitects.com" target="_blank">FGM Architects</a>
+					<br>
+					Theatre Consultant: <a href="http://theatreprojects.com/en/" target="_blank">Theatre Projects Consultants</a>
+					<br>
+					Acoustician: <a href="https://www.thresholdacoustics.com/brown-pac" target="_blank">Threshold Acoustics</a>
+				</p>
+					For more information visit <a href="https://www.thresholdacoustics.com/wheaton" target="_blank">Threshold Acoustics</a>
+
+			</div> <!-- id = room Info X -->
+        </div> <!-- room Infos -->
+
+
+
+
+
+
+
+
+
+
+
+
+ <!-- Audto control //////////////////////////////////////////////////////////////////////////////////////////////-->
+    <div class="App">
+      <div class="AppContent" id="AppContentID">	
+
+   <!-- Play Source in Room ////////////////////////////////////////////////////////          -->
+
+        <div class="CardList">
+          <button id="convolve-btn" class="Button__large">
+          	<span style="font-family:Karla"> <i class="fas fa-play"></i></span>
+          </button>
+        </div> <!-- CardList -->
+
+        <div class="CardList">
+			<button id="record" class="Button__large">
+				<span style="font-family:Karla"> <i class="fas fa-microphone"></i></span>
+			</button>
+		</div> <!-- CardList -->
+
+<!-- /////////////////////////////// -->
+
+
+
+<!-- Select source ////////////////////////////////////////////////////////-->   
+		<div class="CardList">
+	<!--           <h2>Source</h2> -->
+	
+			<div class="dropup">
+			  <button id="source-btn" class="dropbtn"> <span class="Card__title">Kol Nidrei - Cello</span>&nbsp;Bruch&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></button> 
+			 
+			  <div class="dropup-content">
+   
+				<!-- <div class="cardContainer">
+					<div id="source-4" class="Card">
+							<div class="Card__title">Source 4</div>
+							<div class="Card__Info">by Composer</div>
+					</div> 
+				</div> -->
+
+				<div class="cardContainer">
+					<div id="source-3" class="Card">
+						<div class="Card__title">The Cape Cod Files - Clarinet</div>
+						<div class="Card__Info">Paquito D'Rivera</div>
+					</div>
+				</div>
+
+				<div class="cardContainer">
+					<div id="source-2" class="Card">
+						<div class="Card__title">Richard III - Monologue</div>
+						<div class="Card__Info">Shakespeare</div>
+					</div> 
+				</div>
+
+				<div class="cardContainer">
+					<div id="source-1" class="Card Card__selected">
+						<div class="Card__title">Kol Nidrei - Cello</div>
+						<div class="Card__Info">Bruch</div>
+					</div> <!-- Card -->
+				</div>
+
+
+				<div class="cardContainer">
+					<div id="source-0" class="Card">
+						<div class="Card__title">Recording</div>
+						<div class="Card__Info">by User</div>
+					</div> <!-- Card -->
+				</div>
+				
+				<!-- <div class="cardContainer">
+					<div id="source-0" class="recordingCard">
+						<div class="Card__title">Record Yourself</div>
+						<div style="height: 8px"></div>
+						<button id="record" class="Button Button__danger">
+						  <span style="font-family:Karla"> <i class="fas fa-microphone"></i></span>
+						  <span style="font-family:Arial Narrow"> Record</span>
+						</button>
+					</div> 
+				</div> -->
+				
+				</div> <!-- dropup-content -->
+			</div> <!-- dropup -->
+		</div> <!-- CardList -->
+
+
+
+
+
+
+  <!-- Select Impulse ////////////////////////////////////////////////////////          -->
+
+
+	<div class="CardList">
+<!--           <h2>Room</h2> -->
+
+          <div class="dropup">
+		  	<button id="room-btn" class="dropbtn Card__red"> <span class="Card__title">Brockman Hall for Opera Lucian and Nancy Morrison Theater</span>&nbsp;- Configured for Opera&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></button>
+		  	<div class="dropup-content">
+
+			<div class="cardContainer">
+				<div id="impulse-5" class="Card tile">
+					<div class="Card__title">Wheaton Concert Hall</div>
+					<!-- <div class="Card__Info">Drapery</div> -->
+				</div> <!-- Card -->          
+			</div> 
+
+			<div class="cardContainer">
+				<div id="impulse-4" class="Card tile">
+					<div class="Card__title">Brown PAC</div>
+					<div class="Card__Info">Orchestra</div>
+				</div> <!-- Card -->
+			</div> 
+
+			<div class="cardContainer">
+				
+				<div id="impulse-3" class="Card tile">
+					<div class="Card__title">Brown PAC</div>
+					<div class="Card__Info">Recital</div>
+				</div> <!-- Card -->	          
+			</div> 
+
+			<div class="cardContainer">
+			  <div id="impulse-2" class="Card tile">
+	            <div class="Card__title">Writers' Theatre</div>
+	            <!-- <div class="Card__Info"></div> -->
+			  </div> <!-- Card -->
+			</div> 
+			  <div class="cardContainer">
+				<div id="impulse-1" class="Card tile">
+					<div class="Card__title">Brockman Hall for Opera <br> Lucian and Nancy Morrison Theater</div>
+					<div class="Card__Info">Orchestra Shell Deployed</div>
+				</div> <!-- Card -->
+			</div> 
+
+			<div class="cardContainer">
+
+
+				<div id="impulse-0" class="Card tile Card__selected">
+					<div class="Card__title">Brockman Hall for Opera <br> Lucian and Nancy Morrison Theater</div>
+					<div class="Card__Info">Configured for Opera</div>
+				</div> <!-- Card -->
+			</div>
+            </div> <!-- dropup-content -->
+		</div> <!-- dropup -->
+    </div> <!-- CardList -->
+
+
+
+
+
+
+  </div> <!-- AppContent -->
+
+
+    <!-- Room 0 Info  ////////////////////////////////////////////////////////          -->
+    <div class="stuff">
+
+		    <!-- <div class="dropdown">
+	  			<button onclick="myFunction()" class="dropbtn">Dropdown</button>
+	  			<div id="myDropdown" class="dropdown-content">
+	   				<a href="#home">Home</a>
+	    			<a href="#about">About</a>
+	    			<a href="#contact">Contact</a>
+	  			</div>
+			</div>
+
+			 -->
+
+
+
+    <!-- TA link ////////////////////////////////////////////////////////          -->
+<!--     <div class="CardList">    -->
+	    <div class="title">
+	      	<!-- <div class="logo">
+	          	<a href="https://www.thresholdacoustics.com/" target="_blank"><img src="images/Threshold_Logo_Vector(3)-01.png" class="logo"></a>    
+	          	<a href="https://www.thresholdacoustics.com/" target="_blank" id="link">www.thresholdacoustics.com</a>
+	          	<br>
+			</div>  -->
+			<div class="title_text1">THRESHOLD'S</div> 
+			<div class="title_text2">ONLINE AURALIZATION STUDIO</div>
+		</div> <!-- Head -->
+<!--     </div>  --><!-- CardList -->
+
+
+
+
+
+
+    </div> <!-- App -->
+
+  </div> <!-- bgnDiv -->
+
+    <script src="vendor/reverb.js"></script>
+	<script src="convolve.js"></script>
+
+    <script> //drop down
+		/* When the user clicks on the button, 
+		toggle between hiding and showing the dropdown content */
+		function myFunction() {
+		  document.getElementById("myDropdown").classList.toggle("show");
+		}
+
+		// Close the dropdown if the user clicks outside of it
+		window.onclick = function(event) {
+		  if (!event.target.matches('.dropbtn')) {
+		    var dropdowns = document.getElementsByClassName("dropdown-content");
+		    var i;
+		    for (i = 0; i < dropdowns.length; i++) {
+		      var openDropdown = dropdowns[i];
+		      if (openDropdown.classList.contains('show')) {
+		        openDropdown.classList.remove('show');
+		      }
+		    }
+		  }
+		}
+	</script>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-137714012-1"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	
+
+	gtag('config', 'UA-137714012-1');
+	</script>
+
+  </body>
 </html>

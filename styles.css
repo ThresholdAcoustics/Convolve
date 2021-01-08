@@ -1,0 +1,681 @@
+:root {
+  /* --primary-color: rgba(235, 33, 46, 1); */
+  --primary-color: rgba(169, 12, 21, 1);/*TA Red */
+
+  --secondary-color: rgba(241, 241, 239, 0.0);
+  /* --secondary-color: rgba(255, 255, 255, 0.0); */
+
+
+  --card-color: rgba(241, 241, 239, 0.9);
+  /* --card-color: rgba(255, 255, 255, 0.9); */
+  --selected-card-color: rgba(0, 0, 0,.9);
+
+/*  --card-color: rgba(0, 0, 0, 0.5);*/
+
+  /* --recording-color: rgba(235, 33, 46, .9); */
+  --recording-color: rgba(169, 12, 21, .9);/* TA Red */
+
+  --not-recording-color: rgba(0, 0, 0, .9);
+  
+  /* --ta-red: rgba(235, 33, 46, 1); */
+  --ta-red: rgba(169, 12, 21, 1);/* TA Red */
+  --ta-red-hover: rgba(191, 81, 87, 1);/*TA Red */
+
+  --card-font-color: black;
+  --selected-card-font-color: rgba(241, 241, 239, 1);
+
+  --surface-color: rgba(241, 241, 239, 1);
+  --bg-hover-color: #f2f2f2;
+  --surface-hover-color: hsl(0, 0%, 98%);
+
+  --primary-font-color: black;
+  --secondary-font-color: black;
+  --button-font-color: black;
+
+  --on-background: rgba(241, 241, 239, 0.87);
+  /* --on-background: rgba(255, 255, 255, 0.87);
+  */
+  --on-surface: rgba(241, 241, 239, 0.6);
+  /* --on-surface: rgba(255, 255, 255, 0.6); */
+  --on-primary: rgba(241, 241, 239, 1);
+  --on-secondary: #000;
+
+  /* spacing t-shirt sizes */
+  --spacing-none: 0;
+  --spacing-xs: .125rem;
+  --spacing-sm: .25rem;
+  --spacing-md: .5rem;
+  --spacing-lg: .7rem;
+  --spacing-xl: 2.5rem;
+
+  /* radii */
+
+  --radius-md: 0.125rem;
+  --radius-lg: 0.25rem;
+  --radius-xl: 0.7rem;
+  --radius-xxl: 2rem;
+  --radius-circle: 50%;
+
+  /* radii */
+  --font-sm: 0.8rem;
+  --font-md: .9rem;
+  --font-lg: 1.1rem;
+  --font-xl: 1.5rem;
+  --font-xxl: 2rem;
+
+/*  --danger: #f53d4e;*/
+  --danger: rgba(169, 12, 21, 1);
+}
+
+
+
+
+/* #record {
+width: 87px;
+} */
+
+html {
+    background: black;
+
+}
+
+
+  @font-face {
+    font-family: 'universe47';
+    src: url('fonts/Univers 47 Condensed Light.eot'); /* IE9 Compat Modes */
+    src: url('fonts/Univers 47 Condensed Light.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('fonts/Univers 47 Condensed Light.svg#svgFontName') format('svg'); /* Legacy iOS */
+  }
+
+body {
+  padding: 0;
+  margin: 0;
+/*  font-family: 'Karla', sans-serif;*/
+/*  font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;*/
+/* font-family: Arial Narrow, sans-serif;  */
+  font-family: universe47, sans-serif; 
+  color: var(--primary-font-color);
+  font-size: var(--font-md);
+
+  transition-timing-function: ease-in;
+}
+
+/* not used, use for non bgn image*/
+.classImageViewer {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 60%;
+  height: auto;
+}
+
+p {
+  margin-top: 0;
+}
+
+#bgnDiv { /*background image*/
+  background: url(images/0.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#toggleFullscreen {
+position: absolute;
+top: var(--spacing-md);
+right: var(--spacing-md);
+
+cursor: pointer;
+}
+
+#toggleRoomInfo {
+position: absolute;
+top: var(--spacing-md);
+left: var(--spacing-md);
+
+cursor: pointer;
+}
+
+
+#roomInfo {
+  display: none;
+  text-align: left;
+  width: 400px;
+
+  position: absolute;
+  top: 3rem;
+  /*bottom: auto;
+  */
+  left: var(--spacing-md);
+
+  padding: var(--spacing-md);
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  border-radius: var(--radius-xl);
+  border: 1px solid transparent;
+  
+  background: var(--card-color);
+  color: var(--card-font-color);
+}
+
+ul {
+  margin: 0;
+  margin-bottom: var(--spacing-md);
+  
+  padding: var(--spacing-sm);
+
+
+  text-align: left;
+  }
+
+a {
+  color: var(--ta-red);  
+  transition: .3s;
+}
+
+a:hover {
+  transform: scale(1.05,1.05); /* Standard syntax */
+  color: var(--ta-red-hover); 
+}
+
+.taLink {
+/*  text-align: right;*/
+  padding: var(--spacing-sm);
+  box-sizing: border-box;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-sizing: border-box;
+
+  border: 4px solid transparent;
+  background: var(--card-color);
+  color: var(--card-font-color);
+/*  width: 400px;*/
+
+  position: absolute;
+  bottom: var(--spacing-md);
+  right: var(--spacing-md);
+
+  cursor: pointer;
+}
+
+.title {  
+    position: absolute;
+    bottom: .7rem;
+    right: var(--spacing-md);
+    text-align: right;
+    text-decoration: none;
+  }
+
+  .title_text1 {
+    font-size: var(--font-xl);
+    color: var(--card-color);
+  }
+
+  .title_text2 {
+    font-size: var(--font-xxl);
+    color: var(--selected-card-font-color);
+  }
+
+.logo {
+  width: 175px;
+  display: block;
+  margin-left: auto;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+#link {
+  font-style: oblique;
+  font-size: var(--font-sm);
+  color: black;
+  text-decoration: none;
+  margin-right: var(--spacing-md);
+}
+
+.App {
+  overflow-x: hidden;
+  overflow-y: auto;
+  min-height: 100vh;
+
+  padding: 0;
+  margin: 0;
+}
+
+.AppContent {
+  padding: 0;
+
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+
+  /* justify-content: center; */
+  /* vertical-align: bottom; */
+
+  margin: var(--spacing-md);
+/*  margin-top: 5rem;*/
+
+  position: fixed;
+  bottom: 0;
+  left: 0;
+ }
+
+/*
+needed if columns accross bottom of page*/
+/*.AppContent > *:not(:last-child) {
+  margin-right: 2rem;
+}*/
+
+.CardList {
+  display: inline-block;
+
+  margin: 0;
+  margin-right: var(--spacing-md);
+
+  /* box-sizing: border-box; */
+  /* align-self: flex-start; */
+
+  /* display: flex;
+  flex-direction: row;
+  justify-content: flex-start; */
+  /* align-items: bottom; */
+}
+
+/*margin between sub cards*/
+/* .CardList > *:not(:last-child) {
+  margin-bottom: .5rem;
+} */
+
+
+.tile {
+/* max-width: 7rem; */
+
+
+}
+.Card:hover {
+  
+    /* border: 1px solid black; */
+    transform: scale(1.05,1.05); /* Standard syntax */
+}
+
+.Card {
+  /* min-width:20rem; */
+
+  font-size: var(--font-sm);
+  text-align: center;
+  padding: var(--spacing-sm);
+  box-sizing: border-box;
+
+  overflow: hidden;
+  box-sizing: border-box;
+
+  border-radius: var(--radius-xl);
+  border: 1px solid transparent;
+  
+  /*border: 1px solid black;
+  */
+  background: var(--card-color);
+  color: var(--card-font-color);
+
+  margin-bottom: var(--spacing-sm);
+
+  display: flex;
+  flex-direction: column;
+  /* align-items: center;
+  align-content: center; */
+  justify-content: center;
+
+  transition: .3s;
+
+
+}
+
+/*same as .Card but narrower width*/
+.recordingCard { 
+  min-width:271px;
+
+  text-align: center;
+  padding: var(--spacing-sm);
+  box-sizing: border-box;
+
+  overflow: hidden;
+  box-sizing: border-box;
+
+  border-radius: var(--radius-xl);
+  border: 1px solid transparent;
+  background: var(--card-color);
+  color: var(--card-font-color);
+
+  margin-bottom: 0.5rem;
+
+  cursor: pointer;
+}
+
+
+.Card__selected {
+/*  border: 1px solid var(--primary-color);*/
+
+  border: 1px solid transparent;
+
+  background: var(--selected-card-color);
+  color: var(--selected-card-font-color);
+  text-overflow: ellipsis;
+}
+
+.Card__recording {
+/*  border: 1px solid var(--primary-color);*/
+
+  /* border: 1px solid transparent; */
+/*
+  background: var(--recording-color);*/
+  /* color: var(--selected-card-font-color); */
+  /* text-overflow: ellipsis; */
+}
+
+.Card__red {
+background: var(--recording-color);
+color: var(--card-font-color);
+}
+
+.Card__play {
+/*  border: 1px solid var(--primary-color);*/
+
+  border: 1px solid transparent;
+
+  background: var(--selected-card-color);
+  color: var(--selected-card-font-color);
+  text-overflow: ellipsis;
+}
+
+.Card__title {
+  font-weight: bold;
+
+}
+.Card__Info {
+}
+
+h2 {
+  margin: 0;
+  margin-bottom: var(--spacing-sm);
+}
+
+
+.Button {
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-md);
+
+  font-weight: bold;
+  line-height: var(--spacing-md);
+  font-size: var(--font-sm);
+  text-align: bottom;
+
+  transition: .3s;
+
+
+
+/*  color: var(--button-font-color);*/
+  /* background: rgba(255, 255, 255, 1); */
+  background: rgba(241, 241, 239, 1);
+
+  opacity: .9;
+  
+
+
+  outline: none;
+
+  border: 0;
+  cursor: pointer;
+
+
+
+  /* font-family: Arial Narrow, sans-serif;  */
+  font-family: universe47, sans-serif; 
+  }
+
+  .Button:hover {
+    transform: scale(1.05,1.05); /* Standard syntax */
+  }
+
+.Button__danger {
+  min-width: 100%;
+  background: var(--danger);
+/*  border: 2px solid var(--danger);*/
+  color: var(--button-font-color);
+
+    cursor: pointer;
+}
+
+.Button__large {
+
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-md);
+
+  font-weight: bold;
+  line-height: var(--spacing-md);
+  outline: none;
+
+
+  width: var(--spacing-xl);
+
+  height: var(--spacing-xl);
+  
+  font-size: var(--font-lg);
+
+  color: var(--card-font-color);
+
+  border: 1px solid transparent;
+  cursor: pointer;
+
+  opacity: .9;
+
+  transition: .3s;
+}
+
+.Button__large:hover {
+  transform: scale(1.05,1.05); /* Standard syntax */
+}
+
+
+/*animation indicates recording time limit*/
+.recordTimeAnimation_class {
+  animation: recordTimeAnimation 30s;
+  animation-timing-function: ease-out;
+  /* vertical-align: bottom; */
+}
+@keyframes recordTimeAnimation {
+  from {height: 300px;}
+  to {height: var(--spacing-xl);}
+}
+
+
+
+
+/* all drop buttons --------------   */
+.dropbtn {
+
+  cursor: pointer;
+
+  padding: var(--spacing-md);
+
+  height: var(--spacing-xl);
+
+  /* min-width: 20rem; */
+
+  overflow: hidden;
+
+  border-radius: var(--radius-xl);
+  border: 1px solid transparent;
+  background: var(--card-color);
+/* 
+  font-family: Arial Narrow, sans-serif;  */
+  font-family: universe47, sans-serif; 
+  font-size: var(--font-md);
+
+  transition: .3s;
+}
+
+.dropbtn__red {
+
+  cursor: pointer;
+
+  padding: var(--spacing-md);
+
+  height: var(--spacing-xl);
+
+  /* min-width: 20rem; */
+
+  overflow: hidden;
+
+  border-radius: var(--radius-xl);
+  border: 1px solid transparent;
+  background: var(--recording-card-color);
+/* 
+  font-family: Arial Narrow, sans-serif;  */
+  font-family: universe47, sans-serif; 
+  font-size: var(--font-md);
+
+  /* display: flex; */
+  /* align-items: center;
+  justify-content: center; */
+
+  transition: .3s;
+}
+
+
+
+/* The container <div> - needed to position the dropup content */
+.dropup {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropup content (Hidden by Default) */
+.dropup-content {
+  display: none;
+  position: absolute;
+  /* width: 100%; */
+  bottom: 2.5rem;
+  z-index: 1;
+  cursor: pointer;
+}
+
+/* Show the dropup menu on hover */
+.dropup:hover .dropup-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  width: 100%;
+  /* justify-content: center;
+  align-items: center;
+  align-content: center; */
+
+}
+
+/* Change the background color of the dropup button when the dropup content is shown */
+.dropup:hover .dropbtn {
+/*          background-color: #2980B9;*/
+/*          background: var(--card-color);*/
+  transform: scale(1.01,1.01);
+}
+
+
+
+
+
+
+.cardContainer {
+  display: flex;
+  direction: row;
+/* width: 100%; */
+  justify-content: space-around;
+}
+
+
+/* The Modal (background) */
+.modal {
+  
+  display: flex;
+  
+  /* Hidden by default */
+  /* display: none;  */
+  
+
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  
+  
+  position: fixed; /* Stay in place */
+
+  z-index: 1; /* Sit on top */
+
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  /* background-image: linear-gradient(to bottom right, rgba(255,200,255,0.6), rgba(200,255,255,0.0)); Standard syntax (must be last) */
+  /* background: radial-gradient(circle, rgba(255,255,255,.5 ) 0%, rgba(240, 240, 255, 0.2) 100%); */
+  background: radial-gradient(circle, rgba(10,0,0,.8 ) 0%, rgba(0, 0, 20 , 0.9) 100%);
+  
+  transition: .3s;
+
+}
+
+.Card__introContent {
+  line-height: 1.5;
+
+  text-align: center;
+  font-size: var(--font-md);
+
+  width: 23rem;
+
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-xl);
+  background: var(--card-color);
+  color: var(--card-font-color);
+
+}
+
+
+#closeIntro {
+
+  cursor: pointer;
+  padding: var(--spacing-md);
+  margin-top: .4rem;
+  /* height: 3.5rem; */
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  border-radius: var(--radius-xl);
+  border: 1px solid transparent;
+  background: rgba(0, 0, 0, 1);;
+
+  /* font-size: var(--font-sm); */
+  /* font-family: Arial Narrow, sans-serif;  */
+  font-family: universe47, sans-serif; 
+  color: var(--selected-card-font-color);
+}
+
+
+/* Small Screens. */
+@media (max-width: 955px) {
+  .title {  
+    display: none;
+  }
+}
+
+/* Phones only. */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+
+
+}
+}
