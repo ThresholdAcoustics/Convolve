@@ -433,13 +433,13 @@
       document.getElementById('source-btn').innerHTML = '<span class="Card__title">Recording</span>&nbsp;By User&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
     }
     else if (source === 1) {
-      document.getElementById('source-btn').innerHTML = '<span class="Card__title">Kol Nidrei - Cello</span>&nbsp;Bruch&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
+      document.getElementById('source-btn').innerHTML = '<span class="Card__title">Bruch&lsquo;s Kol Nidrei</span>&nbsp;Performed by Mark Lekas, Cello&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
     }
     else if (source === 2) {
-      document.getElementById('source-btn').innerHTML = '<span class="Card__title">Richard III - Monologue</span>&nbsp;Shakespeare&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
+      document.getElementById('source-btn').innerHTML = '<span class="Card__title">Shakespeare&lsquo;s Richard III</span>&nbsp;Recited by Andy Nagraj&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
     }
     else if (source === 3) {
-      document.getElementById('source-btn').innerHTML = '<span class="Card__title">The Cape Cod Files - Clarinet</span>&nbsp;Paquito D&lsquo;Rivera&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
+      document.getElementById('source-btn').innerHTML = '<span class="Card__title">D&lsquo;Rivera&lsquo;s The Cape Cod Files</span>&nbsp;Performed by Trevor O’Riordan, Clarinet&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
     }
     else if (source === 4) {
       document.getElementById('source-btn').innerHTML = '<span class="Card__title">Source 4</span>&nbsp;Composer&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
