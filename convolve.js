@@ -38,9 +38,9 @@
 
   const sources = [
     'dummy_source - user recording takes the place of source 0', /// DUMMY SOURCE
+    'sources/Clarinet Brahms Trio Excerpt_441.wav',
+    'sources/Richard III_441.wav',
     'sources/Cello - Bruch Kol Nidrei for Cello_441.wav',
-    'sources/Male - Richard III_441.wav',
-    'sources/Clarinet Brahms Trio 114 Excerpt_441.wav',
     // 'sources/Clarinet Solo 2_441.wav',
     // 'sources/Violin_Bach_Partita No2-001.m4a',
 
@@ -433,9 +433,11 @@
     if (source === 0){
       document.getElementById('source-btn').innerHTML = '<span class="Card__title">Recording</span>&nbsp;By User&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
     }
+
     else if (source === 1) {
-      document.getElementById('source-btn').innerHTML = '<span class="Card__title">Bruch&lsquo;s Kol Nidrei</span>&nbsp;Performed by Mark Lekas, Cello&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
+      document.getElementById('source-btn').innerHTML = '<span class="Card__title">Brahms&lsquo; Trio in A minor, Op. 114</span>&nbsp;Performed by Trevor O’Riordan, Clarinet&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
     }
+
     else if (source === 2) {
       document.getElementById('source-btn').innerHTML = '<span class="Card__title">Shakespeare&lsquo;s Richard III</span>&nbsp;Recited by Andy Nagraj&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
     }
@@ -443,7 +445,7 @@
     //   document.getElementById('source-btn').innerHTML = '<span class="Card__title">D&lsquo;Rivera&lsquo;s The Cape Cod Files</span>&nbsp;Performed by Trevor O’Riordan, Clarinet&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
     // }
     else if (source === 3) {
-      document.getElementById('source-btn').innerHTML = '<span class="Card__title">Brahms&lsquo; Trio in A minor, Op. 114</span>&nbsp;Performed by Trevor O’Riordan, Clarinet&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
+      document.getElementById('source-btn').innerHTML = '<span class="Card__title">Bruch&lsquo;s Kol Nidrei</span>&nbsp;Performed by Mark Lekas, Cello&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
     }
     else if (source === 4) {
       document.getElementById('source-btn').innerHTML = '<span class="Card__title">Source 4</span>&nbsp;Composer&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
