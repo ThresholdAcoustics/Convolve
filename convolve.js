@@ -40,7 +40,8 @@
     'dummy_source - user recording takes the place of source 0', /// DUMMY SOURCE
     'sources/Cello - Bruch Kol Nidrei for Cello.wav',
     'sources/Male - Richard III-001.wav',
-    'sources/Clarinet Solo 2-001.wav',
+    'sources/Clarinet Brahms Trio 114 Excerpt.wav',
+    // 'sources/Clarinet Solo 2-001.wav',
     // 'sources/Violin_Bach_Partita No2-001.m4a',
 
     // 'sources/StereoTest.m4a',
@@ -438,8 +439,11 @@
     else if (source === 2) {
       document.getElementById('source-btn').innerHTML = '<span class="Card__title">Shakespeare&lsquo;s Richard III</span>&nbsp;Recited by Andy Nagraj&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
     }
+    // else if (source === 3) {
+    //   document.getElementById('source-btn').innerHTML = '<span class="Card__title">D&lsquo;Rivera&lsquo;s The Cape Cod Files</span>&nbsp;Performed by Trevor O’Riordan, Clarinet&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
+    // }
     else if (source === 3) {
-      document.getElementById('source-btn').innerHTML = '<span class="Card__title">D&lsquo;Rivera&lsquo;s The Cape Cod Files</span>&nbsp;Performed by Trevor O’Riordan, Clarinet&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
+      document.getElementById('source-btn').innerHTML = '<span class="Card__title">Brahms&lsquo; Trio in A minor, Op. 114</span>&nbsp;Performed by Trevor O’Riordan, Clarinet&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
     }
     else if (source === 4) {
       document.getElementById('source-btn').innerHTML = '<span class="Card__title">Source 4</span>&nbsp;Composer&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></div>';
