@@ -38,10 +38,10 @@
 
   const sources = [
     'dummy_source - user recording takes the place of source 0', /// DUMMY SOURCE
-    'sources/Cello - Bruch Kol Nidrei for Cello.wav',
-    'sources/Male - Richard III-001.wav',
-    'sources/Clarinet Brahms Trio 114 Excerpt.wav',
-    // 'sources/Clarinet Solo 2-001.wav',
+    'sources/Cello - Bruch Kol Nidrei for Cello_441.wav',
+    'sources/Male - Richard III_441.wav',
+    'sources/Clarinet Brahms Trio 114 Excerpt_441.wav',
+    // 'sources/Clarinet Solo 2_441.wav',
     // 'sources/Violin_Bach_Partita No2-001.m4a',
 
     // 'sources/StereoTest.m4a',
