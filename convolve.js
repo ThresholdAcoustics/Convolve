@@ -39,7 +39,7 @@
   const sources = [
     'dummy_source - user recording takes the place of source 0', /// DUMMY SOURCE
     'sources/Clarinet Brahms Trio Excerpt_441.wav',
-    'sources/Richard III_441.wav',
+    'sources/Richard III_441_.wav',
     'sources/Cello - Bruch Kol Nidrei for Cello_441.wav',
     // 'sources/Clarinet Solo 2_441.wav',
     // 'sources/Violin_Bach_Partita No2-001.m4a',
