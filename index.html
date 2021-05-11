@@ -58,7 +58,7 @@
 <!-- Room 0 Info  ////////////////////////////////////////////////////////          -->
 
 		<div id="roomInfo">
-			<div id="roomInfo-0" style="display: inline">
+			<div id="roomInfo-0" style="display: none">
 				<h2>Brockman Hall for Opera</h2>
 				<h2>Lucian and Nancy Morrison Theater</h2>
 				<h3>Configured for Opera</h3>
@@ -105,7 +105,12 @@
 					For more information visit <a href="https://www.thresholdacoustics.com/rice-university" target="_blank">Threshold Acoustics</a>
 			</div> <!-- id = room info X -->
 
-			<div id="roomInfo-2" style="display: none">
+
+
+
+
+			<!--             //////////////////////////////////////////                         "inline" for initial test             ////////////////////////////////       -->
+			<div id="roomInfo-2" style="display: inline">
 				<h2>Writers' Theatre</h2>
 				<p> </p> 
 				
@@ -232,7 +237,9 @@
 	<!--           <h2>Source</h2> -->
 	
 			<div class="dropup">
-			  <button id="source-btn" class="dropbtn"> <span class="Card__title">Brahms' Trio in A minor, Op 114</span>&nbsp;Performed by Trevor O’Riordan, Clarinet&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></button> 
+
+				<!--////////////////////////////////                       include intial card text here                        //////////////////////////-->
+			  <button id="source-btn" class="dropbtn"> <span class="Card__title">Shakespeare's Richard III</span>&nbsp;Recited by Andy Nagraj&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></button> 
 			 
 			  <div class="dropup-content">
    
@@ -258,14 +265,14 @@
 				</div>
 
 				<div class="cardContainer">
-					<div id="source-2" class="Card">
+					<div id="source-2" class="Card Card__selected"> <!-- /////////////////            use card selected for initial card-->
 						<div class="Card__title">Shakespeare's Richard III</div>
 						<div class="Card__Info">Recited by Andy Nagraj</div>
 					</div> 
 				</div>
 
 				<div class="cardContainer">
-					<div id="source-1" class="Card Card__selected">
+					<div id="source-1" class="Card">
 						<div class="Card__title">Brahms' Trio in A minor, Op 114</div>
 						<div class="Card__Info">Performed by Trevor O’Riordan, Clarinet</div>
 					</div> <!-- Card -->
@@ -305,7 +312,8 @@
 <!--           <h2>Room</h2> -->
 
           <div class="dropup">
-		  	<button id="room-btn" class="dropbtn Card__red"> <span class="Card__title">Brockman Hall for Opera Lucian and Nancy Morrison Theater</span>&nbsp;- Configured for Opera&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></button>
+			  <!--////////////////////////////////                       include intial card text here                        //////////////////////////-->
+		  	<button id="room-btn" class="dropbtn Card__red"> <span class="Card__title">Writers' Theatre</span>&nbsp;&nbsp;<span style="font-family:Karla"><i class="fas fa-chevron-up"></i></span></button> 
 		  	<div class="dropup-content">
 
 			<div class="cardContainer">
@@ -331,7 +339,7 @@
 			</div> 
 
 			<div class="cardContainer">
-			  <div id="impulse-2" class="Card tile">
+			  <div id="impulse-2" class="Card tile Card__selected"> <!-- /////////////////            "Card__selected" for initial card-->
 	            <div class="Card__title">Writers' Theatre</div>
 	            <!-- <div class="Card__Info"></div> -->
 			  </div> <!-- Card -->
@@ -346,7 +354,7 @@
 			<div class="cardContainer">
 
 
-				<div id="impulse-0" class="Card tile Card__selected">
+				<div id="impulse-0" class="Card tile">
 					<div class="Card__title">Brockman Hall for Opera <br> Lucian and Nancy Morrison Theater</div>
 					<div class="Card__Info">Configured for Opera</div>
 				</div> <!-- Card -->

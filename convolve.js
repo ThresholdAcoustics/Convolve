@@ -3,9 +3,9 @@
   let audioContext = new (window.AudioContext || window.webkitAudioContext)();
   reverbjs.extend(audioContext);
 
-  let selected_impulse = 0;
+  let selected_impulse = 2; // set initial room impulse
 
-  let selected_source = 1;
+  let selected_source = 2; // set initial source
   let recording = false;
   let fullscreen = false;
   let convolving = false;
@@ -359,7 +359,7 @@
     document.getElementById('impulse-5').classList.remove('Card__selected');
     document.getElementById('impulse-' + impulse).classList.add('Card__selected');
 
-    //images
+    //images                                                                          ////////////////              set initial image in style.css                          ////////////////// 
     if (impulse === 0){
       document.getElementById("bgnDiv").style.backgroundImage = "url(images/0.jpg)";
     }

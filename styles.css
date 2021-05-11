@@ -114,7 +114,7 @@ p {
 }
 
 #bgnDiv { /*background image*/
-  background: url(images/0.jpg) no-repeat center center fixed; 
+  background: url(images/2.jpg) no-repeat center center fixed;                   /*    ////////////////////////////////        set initial background image here             /////////////////////////////                */
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
